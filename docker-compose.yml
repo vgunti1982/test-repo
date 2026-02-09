@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  hello-world-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: hello-world-spring-app
+    environment:
+      - JAVA_OPTS=-Xmx512m -Xms256m
